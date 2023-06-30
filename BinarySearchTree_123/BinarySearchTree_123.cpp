@@ -71,40 +71,54 @@ public:
 		}
 	}
 
-	void inorder(node* ptr) {
-		if (ROOT == NULL) {
+	void inorder(node* ptr)
+	{
+		if (ROOT == NULL)
+		{
 			cout << "Tree is empty" << endl;
 			return;
 		}
-		if (ptr != NULL) {
+		if (ptr != NULL)
+		{
 			inorder(ptr->leftchild);
 			cout << ptr->info << "  ";
 			inorder(ptr->rightchild);
 		}
 	}
 
-	void preorder(node* ptr) {
-		if (ROOT == NULL) {
+	void preorder(node* ptr)
+	{
+		if (ROOT == NULL)
+		{
 			cout << "Tree is empty" << endl;
 			return;
 		}
-		if (ptr != NULL) {
+		if (ptr != NULL)
+		{
 			cout << ptr->info << "  ";
 			preorder(ptr->leftchild);
 			preorder(ptr->rightchild);
 		}
 	}
 
-	void postorder(node* ptr) {
+	void postorder(node* ptr)
+	{
 		//performs the postorder traversal of the tree
-		if (ROOT == NULL) {
+		if (ROOT == NULL)
+		{
 			cout << "Tree is empty" << endl;
 			return;
 		}
-		if (ptr != NULL) {
+		if (ptr != NULL)
+		{
 			postorder(ptr->leftchild);
 			postorder(ptr->rightchild);
 			cout << ptr->info << "  ";
 		}
 	}
 };
+
+int main()
+{
+	BinaryTree obj;
+}
